@@ -30,6 +30,10 @@ ini semua gratis, jangan pelit ⭐️ ya :D
 <p align="center"><a href="https://instagram.com/ini.kocakz/" target="_blank">Chat me on Insta</a>.</p>
 </div>
 
+## Deploy to heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Imszy17/BotWhatsApp)
+
 ## Getting Started
 
 This project require NodeJS v12.
