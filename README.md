@@ -32,7 +32,7 @@ ini semua gratis, jangan pelit ⭐️ ya :D
 
 ## Deploy to heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Imszy17/BotWhatsApp)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ikadekmahagangga/botwa2)
 
 ## Getting Started
 
