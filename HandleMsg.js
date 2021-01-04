@@ -426,7 +426,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                     res.forEach(x=>{
                         if (x.jawaban.fotoJawaban.length == 0) {
                             aruga.reply(from, `➸ *Pertanyaan* : ${x.pertanyaan}\n\n➸ *Jawaban* : ${x.jawaban.judulJawaban}\n`, id)
-			    aruga.sendText(from, 'Selesai ✅, donasi kesini ya paypal.me/TheSploit | Pulsa : 085754337101')
+			    aruga.sendText(from, 'Selesai ✅, donasi kesini ya paypal.me/ikadekmahagangga | Pulsa : 088219149952')
                         } else {
                             aruga.reply(from, `➸ *Pertanyaan* : ${x.pertanyaan}\n\n➸ *Jawaban* 〙: ${x.jawaban.judulJawaban}\n\n➸ *Link foto jawaban* : ${x.jawaban.fotoJawaban.join('\n')}`, id)
                         }
@@ -514,10 +514,10 @@ module.exports = HandleMsg = async (aruga, message) => {
                 const ImageBase64 = await meme.custom(getUrl, top, bottom)
                 aruga.sendFile(from, ImageBase64, 'image.png', '', null, true)
                     .then(() => {
-                        aruga.reply(from, 'Ini makasih!',id)
+                        aruga.reply(from, 'ini gan tolong donate!',id)
                     })
                     .catch(() => {
-                        aruga.reply(from, 'Ada yang error!')
+                        aruga.reply(from, 'Ada yang error tolong kontak adminnya!')
                     })
             } else {
                 await aruga.reply(from, `Tidak ada gambar! Silahkan kirim gambar dengan caption ${prefix}meme <teks_atas> | <teks_bawah>\ncontoh: ${prefix}meme teks atas | teks bawah`, id)
@@ -847,14 +847,14 @@ module.exports = HandleMsg = async (aruga, message) => {
                 aruga.reply(from, randompantun.replace(/aruga-line/g,"\n"), id)
             })
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
         case 'quote':
             const quotex = await rugaapi.quote()
             await aruga.reply(from, quotex, id)
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
     		case 'cerpen':
@@ -888,7 +888,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                     aruga.sendFileFromUrl(from, randomnimex, '', 'Nee..', id)
                 })
                 .catch(() => {
-                    aruga.reply(from, 'Ada yang Error!', id)
+                    aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
                 })
             } else {
                 aruga.reply(from, `Maaf query tidak tersedia. Silahkan ketik ${prefix}anime untuk melihat list query`)
@@ -905,7 +905,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                     aruga.sendFileFromUrl(from, randomkpopx, '', 'Nee..', id)
                 })
                 .catch(() => {
-                    aruga.reply(from, 'Ada yang Error!', id)
+                    aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
                 })
             } else {
                 aruga.reply(from, `Maaf query tidak tersedia. Silahkan ketik ${prefix}kpop untuk melihat list query`)
@@ -933,7 +933,7 @@ module.exports = HandleMsg = async (aruga, message) => {
             const hasilwall = await images.fdci(cariwall)
             await aruga.sendFileFromUrl(from, hasilwall, '', '', id)
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
         case 'sreddit':
@@ -942,7 +942,7 @@ module.exports = HandleMsg = async (aruga, message) => {
             const hasilreddit = await images.sreddit(carireddit)
             await aruga.sendFileFromUrl(from, hasilreddit, '', '', id)
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
 	    break
         case 'resep':
@@ -951,7 +951,7 @@ module.exports = HandleMsg = async (aruga, message) => {
             const hasilresep = await resep.resep(cariresep)
             await aruga.reply(from, hasilresep + '\n\nIni kak resep makanannya..', id)
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
         case 'nekopoi':
@@ -967,7 +967,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                 })
             })
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Errorsilakan kontak adminnya!', id)
             })
             break
         case 'stalkig':
@@ -976,7 +976,7 @@ module.exports = HandleMsg = async (aruga, message) => {
             const igstalkpict = await rugaapi.stalkigpict(args[0])
             await aruga.sendFileFromUrl(from, igstalkpict, '', igstalk, id)
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
         case 'wiki':
@@ -985,7 +985,7 @@ module.exports = HandleMsg = async (aruga, message) => {
             const wikis = await rugaapi.wiki(wikip)
             await aruga.reply(from, wikis, id)
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
         case 'cuaca':
@@ -994,7 +994,7 @@ module.exports = HandleMsg = async (aruga, message) => {
             const cuacap = await rugaapi.cuaca(cuacaq)
             await aruga.reply(from, cuacap, id)
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
         case 'lyrics':
@@ -1011,7 +1011,7 @@ module.exports = HandleMsg = async (aruga, message) => {
             const chordp = await rugaapi.chord(chordq)
             await aruga.reply(from, chordp, id)
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
         case 'ss': //jika error silahkan buka file di folder settings/api.json dan ubah apiSS 'API-KEY' yang kalian dapat dari website https://apiflash.com/
@@ -1019,7 +1019,7 @@ module.exports = HandleMsg = async (aruga, message) => {
             const scrinshit = await meme.ss(args[0])
             await aruga.sendFile(from, scrinshit, 'ss.jpg', 'cekrek', id)
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
         case 'play'://silahkan kalian custom sendiri jika ada yang ingin diubah
@@ -1038,7 +1038,7 @@ module.exports = HandleMsg = async (aruga, message) => {
 				})
             })
             .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+                aruga.reply(from, 'Ada yang Error silakan kontak adminnya!', id)
             })
             break
 		case 'movie':
@@ -1166,7 +1166,7 @@ module.exports = HandleMsg = async (aruga, message) => {
 
 		//Fun Menu
     case 'tod':
-    aruga.reply(from, 'Sebelum bermain berjanjilah akan melaksanakan apapun perintah yang diberikan.\n\nSilahkan Pilih:\n➥ #truth\n➥ #dare', id)
+    aruga.reply(from, 'Sebelum bermain berjanjilah akan melaksanakan apapun perintah yang diberikan silakan donate terlebih dahulu.\n\nSilahkan Pilih:\n➥ #truth\n➥ #dare', id)
     break
     case 'truth':
     if (!isGroupMsg) return aruga.reply(from, menuId.textPrem())
@@ -1221,8 +1221,8 @@ module.exports = HandleMsg = async (aruga, message) => {
                 }
             break
         case 'kick':
-            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
-            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
+            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai oleh bot kucing peduli by maha!', id)
+            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh oleh bot kucing peduli by maha!', id)
             if (!isBotGroupAdmins) return aruga.reply(from, 'Gagal, silahkan tambahkan bot sebagai admin grup!', id)
             if (mentionedJidList.length === 0) return aruga.reply(from, 'Maaf, format pesan salah.\nSilahkan tag satu atau lebih orang yang akan dikeluarkan', id)
             if (mentionedJidList[0] === botNumber) return await aruga.reply(from, 'Maaf, format pesan salah.\nTidak dapat mengeluarkan akun bot sendiri', id)
@@ -1233,8 +1233,8 @@ module.exports = HandleMsg = async (aruga, message) => {
             }
             break
         case 'promote':
-            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
-            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
+            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai oleh bot kucing peduli by maha!', id)
+            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh oleh bot kucing peduli by maha!', id)
             if (!isBotGroupAdmins) return aruga.reply(from, 'Gagal, silahkan tambahkan bot sebagai admin grup!', id)
             if (mentionedJidList.length !== 1) return aruga.reply(from, 'Maaf, hanya bisa mempromote 1 user', id)
             if (groupAdmins.includes(mentionedJidList[0])) return await aruga.reply(from, 'Maaf, user tersebut sudah menjadi admin.', id)
@@ -1243,8 +1243,8 @@ module.exports = HandleMsg = async (aruga, message) => {
             await aruga.sendTextWithMentions(from, `Request diterima, menambahkan @${mentionedJidList[0].replace('@c.us', '')} sebagai admin.`)
             break
         case 'demote':
-            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
-            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
+            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai oleh bot kucing peduli by maha!', id)
+            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin bot kucing peduli by maha !', id)
             if (!isBotGroupAdmins) return aruga.reply(from, 'Gagal, silahkan tambahkan bot sebagai admin grup!', id)
             if (mentionedJidList.length !== 1) return aruga.reply(from, 'Maaf, hanya bisa mendemote 1 user', id)
             if (!groupAdmins.includes(mentionedJidList[0])) return await aruga.reply(from, 'Maaf, user tersebut belum menjadi admin.', id)
@@ -1253,27 +1253,27 @@ module.exports = HandleMsg = async (aruga, message) => {
             await aruga.sendTextWithMentions(from, `Request diterima, menghapus jabatan @${mentionedJidList[0].replace('@c.us', '')}.`)
             break
         case 'bye':
-            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
-            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
+            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya oleh bot kucing peduli by maha!', id)
+            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh bot kucing peduli by maha!', id)
             aruga.sendText(from, 'Good bye... ( ⇀‸↼‶ )').then(() => aruga.leaveGroup(groupId))
             break
         case 'del':
-            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
+            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh bot kucing peduli by maha!', id)
             if (!quotedMsg) return aruga.reply(from, `Maaf, format pesan salah silahkan.\nReply pesan bot dengan caption ${prefix}del`, id)
             if (!quotedMsgObj.fromMe) return aruga.reply(from, `Maaf, format pesan salah silahkan.\nReply pesan bot dengan caption ${prefix}del`, id)
             aruga.deleteMessage(quotedMsgObj.chatId, quotedMsgObj.id, false)
             break
         case 'tagall':
         case 'everyone':
-            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
-            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
+            if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai oleh bot kucing peduli by maha!', id)
+            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh oleh bot kucing peduli by maha!', id)
             const groupMem = await aruga.getGroupMembers(groupId)
-            let hehex = '╔══✪〘 Mention All 〙✪══\n'
+            let hehex = '╔══✪〘 Mention All BY ROBOT KUCING PEDULI 〙✪══\n'
             for (let i = 0; i < groupMem.length; i++) {
                 hehex += '╠➥'
                 hehex += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
             }
-            hehex += '╚═〘 *A R U G A  B O T* 〙'
+            hehex += '╚═〘 *KUCING PEDULI B O T* 〙'
             await aruga.sendTextWithMentions(from, hehex)
             break
 		case 'simisimi':
